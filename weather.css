@@ -149,6 +149,7 @@ body {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
+    color: white;
 }
 
 .card .card_time {
@@ -197,4 +198,5 @@ body {
         align-items: center;
         justify-content: space-between;
     }
+
 }
