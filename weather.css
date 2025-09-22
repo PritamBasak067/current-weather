@@ -154,6 +154,7 @@ body {
 
 .card .card_time {
     margin-top: 5px;
+    color: white;
 }
 
 .card .card-icon {
@@ -171,6 +172,7 @@ body {
 
 .card .card-hum {
     margin-top: 15px;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -200,3 +202,4 @@ body {
     }
 
 }
+
