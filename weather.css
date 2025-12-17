@@ -202,6 +202,22 @@ body {
 
 }
 
+.share-btn-box {
+    margin-bottom: 40px;
+    width: auto;
+    height: auto;
+}
 
-
-
+.share-btn-box button {
+    width: 120px;
+    height: 40px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
