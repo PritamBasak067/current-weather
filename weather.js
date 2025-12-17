@@ -115,50 +115,52 @@ async function ser() {
         //card1
         document.getElementById("card_time1").innerText = `${forecast.list[0].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon1").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[0].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem1").innerHTML = `${forecast.list[0].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem1").innerHTML = `${forecast.list[0].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum1").innerHTML = `${forecast.list[0].main.humidity}%`;
 
         //card2
         document.getElementById("card_time2").innerText = `${forecast.list[1].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon2").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[1].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem2").innerHTML = `${forecast.list[1].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem2").innerHTML = `${forecast.list[1].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum2").innerHTML = `${forecast.list[1].main.humidity}%`;
 
         //card3
         document.getElementById("card_time3").innerText = `${forecast.list[2].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon3").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[2].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem3").innerHTML = `${forecast.list[2].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem3").innerHTML = `${forecast.list[2].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum3").innerHTML = `${forecast.list[2].main.humidity}%`;
 
         //card4
         document.getElementById("card_time4").innerText = `${forecast.list[3].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon4").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[3].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem4").innerHTML = `${forecast.list[3].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem4").innerHTML = `${forecast.list[3].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum4").innerHTML = `${forecast.list[3].main.humidity}%`;
 
         //card5
         document.getElementById("card_time5").innerText = `${forecast.list[4].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon5").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[4].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem5").innerHTML = `${forecast.list[4].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem5").innerHTML = `${forecast.list[4].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum5").innerHTML = `${forecast.list[4].main.humidity}%`;
 
         //card6
         document.getElementById("card_time6").innerText = `${forecast.list[5].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon6").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[5].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem6").innerHTML = `${forecast.list[5].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem6").innerHTML = `${forecast.list[5].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum6").innerHTML = `${forecast.list[5].main.humidity}%`;
 
         //card7
         document.getElementById("card_time7").innerText = `${forecast.list[6].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon7").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[6].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem7").innerHTML = `${forecast.list[6].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem7").innerHTML = `${forecast.list[6].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum7").innerHTML = `${forecast.list[6].main.humidity}%`;
 
         //card8
         document.getElementById("card_time8").innerText = `${forecast.list[7].dt_txt.substring(11,16)}`;
         document.getElementById("card_icon8").innerHTML = `<img src="https://openweathermap.org/img/wn/${forecast.list[7].weather[0].icon}@2x.png" alt="weather icon">`;
-        document.getElementById("card_tem8").innerHTML = `${forecast.list[7].main.temp}<sup style="font-size: 10px;">°</sup>C`;
+        document.getElementById("card_tem8").innerHTML = `${forecast.list[7].main.temp}<sup style="font-size: 16px;">°</sup>C`;
         document.getElementById("card_hum8").innerHTML = `${forecast.list[7].main.humidity}%`;
+
+        localStorage.setItem("lastcity", inp);
 
     } catch(error) {
         document.getElementById("location").innerHTML = "Location not found";
@@ -172,11 +174,10 @@ function sharepage() {
             title: document.title,
             text: "see this page",
             url: "https://pritambasak067.github.io/current-weather/"
-        });
+        })
         .then(() => console.log("shared successfully"))
         .catch ((error) => console.log("error:", error));
     } else {
         alert("your browser doesn't support sharing");
     }
 };
-
