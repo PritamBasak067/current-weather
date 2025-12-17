@@ -178,4 +178,5 @@ function sharepage() {
     } else {
         alert("your browser doesn't support sharing");
     }
-}
+};
+
