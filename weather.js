@@ -166,5 +166,16 @@ async function ser() {
     }
 };
 
-
-//dt_txt
+function sharepage() {
+    if (navigator.share) {
+        navigator.share( {
+            title: document.title,
+            text: "see this page",
+            url: window.location.href
+        })
+        .then(() => console.log("shared successfully"))
+        .catch ((error) => console.log("error:", error));
+    } else {
+        alert("your browser doesn't support sharing");
+    }
+}
