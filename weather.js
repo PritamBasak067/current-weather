@@ -168,16 +168,3 @@ async function ser() {
     }
 };
 
-function sharepage() {
-    if (navigator.share) {
-        navigator.share( {
-            title: document.title,
-            text: "see this page",
-            url: "https://pritambasak067.github.io/current-weather/"
-        })
-        .then(() => console.log("shared successfully"))
-        .catch ((error) => console.log("error:", error));
-    } else {
-        alert("your browser doesn't support sharing");
-    }
-};
