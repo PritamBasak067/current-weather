@@ -173,8 +173,8 @@ function sharepage() {
         navigator.share( {
             title: document.title,
             text: "see this page",
-            url: window.location.href
-        })
+            url: "https://pritambasak067.github.io/current-weather/"
+        });
         .then(() => console.log("shared successfully"))
         .catch ((error) => console.log("error:", error));
     } else {
@@ -189,3 +189,4 @@ window.addEventListener("load", () => {
         ser();
     }
 });
+
