@@ -160,8 +160,6 @@ async function ser() {
         document.getElementById("card_tem8").innerHTML = `${forecast.list[7].main.temp}<sup style="font-size: 10px;">°</sup>C`;
         document.getElementById("card_hum8").innerHTML = `${forecast.list[7].main.humidity}%`;
 
-        localStorage.setItem("lastcity", inp);
-
     } catch(error) {
         document.getElementById("location").innerHTML = "Location not found";
         alert("Something is wrong! Try again and check your network connection.");
@@ -181,12 +179,3 @@ function sharepage() {
         alert("your browser doesn't support sharing");
     }
 }
-
-window.addEventListener("load", () => {
-    let city = localStorage.getItem("lastcity");
-    if (city) {
-        document.getElementById("inp").value = city;
-        ser();
-    }
-});
-
